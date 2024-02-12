@@ -1,10 +1,10 @@
-import './App.css';
-import { useState } from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
-import { Route, Routes } from 'react-router-dom';
+import "./App.css";
+import { useState } from "react";
+import { Container, Nav, Navbar } from "react-bootstrap";
+import { Route, Routes } from "react-router-dom";
+import MapTest from "./location";
 
 function App() {
-  
   return (
     <div>
       <Navbar bg="dark" data-bs-theme="dark" collapseOnSelect expand="lg" className="bg-body-tertiary main-navbar">
@@ -15,7 +15,6 @@ function App() {
             <Nav className="me-auto">
               <Nav.Link href="#features">경로 탐색 및 안내</Nav.Link>
               <Nav.Link href="#pricing">여행지 추천</Nav.Link>
-              
             </Nav>
             <Nav>
               <Nav.Link href="#deets">Sign Up</Nav.Link>
@@ -27,23 +26,22 @@ function App() {
         </Container>
       </Navbar>
 
-      <Nav fill variant="tabs" defaultActiveKey="/home">
-        <Nav.Item>
-          <Nav.Link href="/home">Active</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link eventKey="/detail">Loooonger NavLink</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link eventKey="link-2">Link</Nav.Link>
-        </Nav.Item>
-      </Nav>
+      <div className="sidebar">
+        <div className="sidebar-icon">1</div>
+        <div className="sidebar-icon">2</div>
+        <div className="sidebar-icon">3</div>
+        <div className="sidebar-icon">4</div>
+      </div>
 
-      <Routes>
+      <MapTest />
+
+      {/* c5bc5e9a942be7948330f8cd95de2520 */}
+
+      {/* <Routes>
         <Route path = "/home"/>
         <Route path = "/home"/>
         <Route path = "/home"/>
-      </Routes>
+      </Routes> */}
     </div>
   );
 }
