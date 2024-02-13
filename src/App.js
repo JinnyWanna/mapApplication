@@ -1,5 +1,5 @@
 import "./App.css";
-import Search from "./components/Search";
+import SearchPlace from "./components/SearchPlace";
 import Header from "./components/Header";
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
         <div className="sidebar-icon">4</div>
       </div>
 
-      <Search />
+      <SearchPlace />
 
       {/* c5bc5e9a942be7948330f8cd95de2520 */}
 
