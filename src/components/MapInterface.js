@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./MapInterface.css";
 
 const { kakao } = window;
 
@@ -82,9 +83,10 @@ const MapInterface = ({ searchPlace }) => {
   }, [searchPlace]);
 
   return (
-    <div>
+    <div id="mapsection">
       <div
         id="myMap"
+        className="myMap"
         style={{
           width: "600px",
           height: "600px",
