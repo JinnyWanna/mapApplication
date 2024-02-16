@@ -1,30 +1,27 @@
 import { useState, useEffect } from 'react'
+import './App.css';
+import { Map, maps } from 'react-kakao-maps-sdk';
 
 
 
 const { kakao } = window;
+// var center = map.getCenter(); 
 
-const MapTest = () => {
-    const [map,setMap] = useState(null);
-
+const MapTest = (props) => {
     //처음 지도 그리기
     useEffect(()=>{
+        const options = { 
+            center: new kakao.maps.LatLng(33.450701, 126.570667) ,
+            level : 3
+        };
         const container = document.getElementById('map');
-        const options = { center: new kakao.maps.LatLng(33.450701, 126.570667) };
         const kakaoMap = new kakao.maps.Map(container, options);
-        setMap(kakaoMap);
+
     },[])
 
     return (
-        <div
-            style={{
-                width: '100%',
-                display: 'inline-block',
-                marginLeft: '5px',
-                marginRight: '5px',
-            }}
-        >
-            <div id="map" style={{ width: '99%', height: '500px' }}></div>
+        <div>
+            <div id="map"></div>
         </div>
     );
 };
